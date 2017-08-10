@@ -1,0 +1,13 @@
+body {
+  font-family: 'Lobster';
+  color: #fff;
+  background-color: #161616;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 5em;
+}
