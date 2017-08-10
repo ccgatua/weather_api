@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lobster';
+  font-family: 'Roboto';
   color: #fff;
   background-color: #161616;
 }
@@ -9,5 +9,6 @@ header {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 2em;
+  font-family: 'Lobster';
 }
