@@ -4,11 +4,19 @@ body {
   background-color: #161616;
 }
 
-header {
-  margin-bottom: 30px;
-}
-
 h1 {
   font-size: 2em;
   font-family: 'Lobster';
+}
+
+.container {
+  margin-bottom: 30px;
+  color: white;
+  background: gray;
+  width: 60%;
+  margin: auto;
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 0.5;
+  border: solid white 2px;
 }

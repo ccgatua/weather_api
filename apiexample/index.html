@@ -13,25 +13,27 @@
       <h1>Free Code Camp </h1>
       <h1>Weather API</h1>
     </center>
-</div>
-  
+</div>  
   
 <body>
   <div id="weather"></div>
   <p>Temperature: <span id="temp"></span></p>
   <p>Wind Speed: <span id="wind"></span></p>
-  <script>
+  <span id="weatherCast"></span>
+<script>
     var weather = new XMLHttpRequest();
     weather.open("GET", "https://api.wunderground.com/api/1c76987a439f31c6/conditions/q/CA/San_Francisco.json", false);
     weather.send(null);
 
     var r = JSON.parse(weather.response);
     var dis = "Current location: " + r.current_observation.display_location.full + "<br />";
-    var temp = r.current_observation.temperature_string + "<br />";
-    var wind = r.current_observation.wind_string + "<br />";
+    var temp = r.current_observation.temperature_string + "     <br />";
+    var wind = r.current_observation.wind_string + "    <br />";
+    var weatherCast = r.current_observation.weather + "    <br />";
     document.getElementById("weather").innerHTML = dis;
     document.getElementById("temp").innerHTML = temp;
     document.getElementById("wind").innerHTML = wind;
+    document.getElementById("weatherCast").innerHTML = weatherCast;
     function getWeather(arg) {
       document.getElementById("arg").innerHTML = arg;
     }
@@ -39,6 +41,16 @@
     getWeather("temp", temp);
     getWeather("wind", wind);
     
-  </script>
-</body>    
+    var weatherImage = "";
+      var imagePhoto = {
+        stormy: "http://phelpscountyindependent.com/images/graphics/N1307P72008C.png",
+        rainy:"http://images.clipartpanda.com/rain-clip-art-RcdRg7eei.png",
+        cloudy:"https://clipartion.com/wp-content/uploads/2015/11/free-to-use-amp-public-domain-cloud-clip-art1-830x539.png",
+        snow:"http://dkcoin8.com/images/snowy-cloud-clipart-3.png",
+        sunny:"http://www.clker.com/cliparts/E/m/H/T/6/Z/weather-clear-md.png"
+      };
+
+
+</script>
+</body>  
 </html>
